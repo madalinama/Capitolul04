@@ -10,9 +10,10 @@ Determinați câte cuvinte are textul introdus la punctul 1și afișați rezulta
 using namespace std;
 int main()
 {
-    char sirStack[]="Acesta este un sir de caractere nou.";
+    char sirStack[]="Acesta este un sir de caractere.";
     char*sirHeap=new char[sizeof(sirStack)];
-    sirHeap=sirStack;
+    for (int i =0; i<sizeof(sirStack);++i)
+    sirHeap[i]=sirStack[i];
     cout<<sirHeap<<endl;
     int nr =0;
     for (int i =0; i<sizeof(sirStack);++i)
